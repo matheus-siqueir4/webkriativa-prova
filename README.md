@@ -28,7 +28,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Node.js
 
 ### Requisitos
-- PHP: ^8.0
+- PHP: ^8.2
 - Laravel: 10.0x
 - Node.js: 9.5
 - MYSQL
