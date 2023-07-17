@@ -26,6 +26,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Bootstrap 5
 - MYSQL
 - Node.js
+- CSS
 
 ### Requisitos
 - PHP: ^8.2
