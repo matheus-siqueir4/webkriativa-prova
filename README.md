@@ -46,7 +46,7 @@ Crie apenas o banco de dados. Sem nenhuma tabela.
 
 Após rodar esses comandos, renomeie o arquivo .env.example para .env e configure seu banco de dados:
     
-![image](https://github.com/matheus-siqueir4/webkriativa/assets/117112575/1a33e87d-3171-40ed-90aa-17c65ed6e9af)
+![image](https://github.com/matheus-siqueir4/webkriativa-prova/assets/117112575/e1a01f95-1045-4af6-a127-d644bf4998d3)
 
 Execute:
 
