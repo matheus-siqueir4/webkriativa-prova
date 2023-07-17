@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+    --color-succes: #00bf8e;
+    --color-warning: #f7c94b;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+    color: black;
+    background: #AD97E6;
+}
+
+/* NAVBAR */
+
+.navbar-ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-item {
+    float: right;
+
+}
+
+li a {
+    display: block;
+    padding: 15px 18px;
+    color: #E0FFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #5430FF;
+}
+
+.icone-principal {
+    float: left;
+}
+
+i {
+    margin-right: 8px;
+}
+
+/* SEARCH */
+
+.div-search {
+    padding: 80px 350px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    float: left;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 400px;
+    height: 40px;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.div-search i {
+    margin-left: 8px;
+    margin-top: 22px;
+}
+
+.label-search {
+    float: left;
+    margin-right: 8px;
+    margin-top: 0.5px;
+    font-size: 25px;
+}
+
+/* CURSOS */
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.courses {
+    margin-top: 10rem;
+}
+
+.courses_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    transition: var(--transition);
+}
+
+.course {
+    background: #b4b4fd;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.course:hover {
+    background: #8686f8;
+    border-color: black;
+}
+
+.course_info {
+    padding: 2rem;
+}
+
+.course_info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 1rem 2.5rem;
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-primary {
+    background: blue;
+    color: white;
+}
+
+/* =============== MEDIA QUERIES (TABLETS) ================= */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    /* =================== NAVBAR =================== */
+
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .nav_menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_menu li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_menu li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+
+        100% {
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .nav_menu li a {
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav_menu li a:hover {
+        background: var(--color-bg2);
+        color: white;
+    }
+
+    /* ================ POPULAR COURSES ================ */
+
+    .courses {
+        margin-top: 0;
+    }
+
+    .courses_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ======================== MEDIA QUERIES (PHONES) ====================== */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* ============== NAVBAR =============== */
+
+    .nav_menu {
+        right: 3%;
+    }
+
+    /* ================= POPULAR COURSES =============== */
+
+    .courses_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product_container {
+    background: #A8D5FE;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    justify-content: center;
+    border: solid black;
+}
+
+.product_container img {
+    margin-left: 30px;
+}
+
+.produto {
+    margin-left: 60px;
+}
+
+.produto h1 {
+    text-transform: uppercase;
+}
+
+.produto p {
+    margin-top: 3rem;
+}
+
+/* table */
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.ferramenta_table {
+    width: 200px;
+}
+
+.table td,
+th {
+    border: 2px solid #4B0082;
+    padding: 8px;
+}
+
+.table tr {
+    background-color: #ddd;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #663399;
+    color: white;
+}
+
+.table_titulo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.id_table {
+    width: 20px;
+    text-align: center;
+}
+
+/* Botão */
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.separaBotao {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 200px;
+}

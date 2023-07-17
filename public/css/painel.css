@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+    --color-succes: #00bf8e;
+    --color-warning: #f7c94b;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+    color: white;
+    background: rgb(59, 19, 59);
+}
+
+/* NavBar */
+
+.navbar-ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-item {
+    float: right;
+
+}
+
+li a {
+    display: block;
+    padding: 15px 18px;
+    color: #E0FFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #5430FF;
+}
+
+.icone-principal {
+    float: left;
+}
+
+i {
+    margin-right: 8px;
+}
+
+/* */
+
+.welcome-info {
+    display: block;
+    margin-top: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+.botao-endereco {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px 20px;
+    cursor: pointer;
+    display: block;
+    width: 280px;
+    float: right;
+}
+
+div table {
+    margin-top: 200px;
+}
+
+table,
+td,
+th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 15px;
+}
+
+
+/* BOTAO */
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-primary {
+    background: blue;
+    color: white;
+}
+
+.table-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.btn-cadaster {
+    background-color: red;
+}
+
+
+/* SEARCH */
+
+.div-search {
+    padding: 80px 350px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    float: left;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 400px;
+    height: 40px;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.div-search i {
+    margin-left: 8px;
+    margin-top: 22px;
+}
+
+.label-search {
+    float: left;
+    margin-right: 8px;
+    margin-top: 0.5px;
+    font-size: 25px;
+}
