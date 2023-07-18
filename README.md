@@ -39,7 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Após isso, no terminal execute os Rode os comandos:
     
     git clone https://github.com/matheus-siqueir4/webkriativa-prova.git
-    cd .\webkriativa\
+    cd .\webkriativa-prova
     composer install
     npm install
 
